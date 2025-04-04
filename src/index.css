@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 100% 97%;
+    --foreground: 30 50% 16%;
+
+    --card: 48 67% 91%;
+    --card-foreground: 30 50% 16%;
+
+    --popover: 48 100% 97%;
+    --popover-foreground: 30 50% 16%;
+
+    --primary: 32 51% 36%;
+    --primary-foreground: 48 100% 97%;
+
+    --secondary: 60 40% 91%;
+    --secondary-foreground: 32 51% 36%;
+
+    --muted: 48 67% 91%;
+    --muted-foreground: 30 25% 35%;
+
+    --accent: 180 100% 25%;
+    --accent-foreground: 48 100% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 48 100% 97%;
+
+    --border: 32 30% 80%;
+    --input: 32 30% 80%;
+    --ring: 32 51% 36%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-coffee-light text-coffee-dark;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.cafe-card {
+  transition: transform 0.3s ease;
+}
+
+.cafe-card:hover {
+  transform: translateY(-5px);
+}
+
+.rating-star {
+  color: #FFD700;
+}
+
+.bg-blur {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.cafe-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-coffee-cream text-coffee-dark;
+}
+
+.btn-primary {
+  @apply bg-coffee-brown hover:bg-coffee-dark text-white py-2 px-4 rounded-md transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-coffee-cream hover:bg-coffee-medium text-coffee-dark py-2 px-4 rounded-md transition-colors;
+}
+
+.btn-outline {
+  @apply border border-coffee-medium hover:bg-coffee-cream text-coffee-dark py-2 px-4 rounded-md transition-colors;
+}
